@@ -1,0 +1,25 @@
+@ThesisBackendAPI_HostAddress = http://localhost:5266
+
+POST {{ThesisBackendAPI_HostAddress}}/character/
+Content-Type: application/json
+
+{
+  "name": "",
+  "description": "",
+  "characteristics": {
+    "strenght": 0,
+    "agility": 0,
+    "resistance": 0,
+    "insinct": 0,
+    "knowledge": 0,
+    "charisma": 0
+  }
+}
+###
+POST {{ThesisBackendAPI_HostAddress}}/action/
+Content-Type: application/json
+
+{
+  "content": ""
+}
+###

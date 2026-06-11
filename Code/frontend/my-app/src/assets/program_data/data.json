@@ -1,0 +1,153 @@
+{
+    "archetypes": [
+        {
+        "name": "Warrior",
+        "id": 0,
+        "description": "A strong and resilient fighter. Extremely skilled in combat and physical challenges, but not very good at magic or social interactions.",
+        "characteristics": {
+            "strength": 6,
+            "resistance": 5,
+            "agility": 4,
+            "knowledge": 2,
+            "charisma": 1,
+            "instinct": 3
+        },
+        "features": [
+            {"name": "fighter", "description": "The character has fighting experience, and so has an advantage in physical combat."}
+        ],
+         "equippedItems": [
+        {
+            "name": "sword", 
+            "description": "A simple straight sword, useful in combat.",
+            "bonuses": {
+                "strength": 1
+            },
+            "compatibleSlots": ["right_hand", "left_hand"],
+            "equippedInSlot": "right_hand"
+        },
+        {
+            "name": "shield", 
+            "description": "A simple round shield, good for self defense.",
+            "bonuses": {
+                "resistance": 1
+            },
+            "compatibleSlots": ["right_hand", "left_hand"],
+            "equippedInSlot": "left_hand"
+        }
+    ]
+    },
+        {
+        "name": "Explorer",
+        "id": 2,
+        "description": "A stealthy and agile character, excelling in survival and quick reflexes. Knows his way in both fighting and spellcasting, but is not an expert in any of those.",
+        "characteristics": {
+            "strength": 2,
+            "resistance": 4,
+            "agility": 6,
+            "knowledge": 3,
+            "charisma": 1,
+            "instinct": 5
+        },
+        "features": [
+            {"name": "survivalist", "description": "The character knows their way in the nature and can get out from difficult situations."}
+        ],
+         "equippedItems": [
+        {
+            "name": "leather_boots", 
+            "description": "Robust leather boots, perfect for exploration in the wild",
+            "bonuses": {
+                "agility": 1
+            },
+            "compatibleSlots": ["armor"],
+            "equippedInSlot": "armor"
+        },
+        {
+            "name": "rope", 
+            "description": "An old but still functioning rope, can be used in multiple creative ways.",
+            "bonuses": {
+                "instinct": 1
+            },
+            "compatibleSlots": ["right_hand", "left_hand", "accessory"],
+            "equippedInSlot": "accessory"
+        }
+            ]
+        },
+        {
+        "name": "Mage",
+        "id": 1,
+        "description": "A master of arcane arts, possessing vast knowledge and powerful spells. Extremely skilled in the use of magic, but not very good at fighting or physical challenges.",
+        "characteristics": {
+            "strength": 2,
+            "resistance": 1,
+            "agility": 3,
+            "knowledge": 6,
+            "charisma": 4,
+            "instinct": 5
+        },
+        "features": [
+            {"name": "spellcaster", "description": "The character is proficient in the use of magic, being able to cast better and more powerful spells."}
+        ],
+         "equippedItems": [
+        {
+            "name": "book_of_knowledge", 
+            "description": "A book containing ancient knowledge, which most consider to be lost",
+            "bonuses": {
+                "knowledge": 1
+            },
+            "compatibleSlots": ["right_hand", "left_hand", "accessory"],
+            "equippedInSlot": "left_hand"
+        },
+        {
+            "name": "necklace_of_influence", 
+            "description": "An enchanted talisman, which makes the wearer appear more charming.",
+            "bonuses": {
+                "charisma": 1
+            },
+            "compatibleSlots": ["accessory"],
+            "equippedInSlot": "accessory"
+        }
+            ]
+        },
+        {
+        "name": "Bard",
+        "id": 3,
+        "description": "A charismatic performer and storyteller, skilled in music, lore, and social interactions. Can fight and use magic, but is not an expert in any of those.",
+        "characteristics": {
+            "strength": 3,
+            "resistance": 2,
+            "agility": 5,
+            "knowledge": 4,
+            "charisma": 6,
+            "instinct": 1
+        },
+        "features": [
+            {"name": "smoothtalker", "description": "The character knows how to use words to convince, intimidate or deceive others."}
+        ],
+         "equippedItems": [
+        {
+            "name": "violin", 
+            "description": "A well made violin, produces a clear and sweet sound.",
+            "bonuses": {
+                "charisma": 1
+            },
+            "compatibleSlots": ["right_hand", "left_hand"],
+            "equippedInSlot": "right_hand"
+        },
+        {
+            "name": "silk_gloves", 
+            "description": "Silky, delicate gloves, helps improving the manual skills of the wearer.",
+            "bonuses": {
+                "agility": 1
+            },
+            "compatibleSlots": ["armor", "accessory"],
+            "equippedInSlot": "armor"
+        }
+        ]
+        }
+    ],
+    "goals":[
+        {"name": "crown", "description": "Retrieve the Mystic Crown of the Fallen King.\nThe Mystic Crown is said to be able to grant a single wish of its bearer."},
+        {"name": "shadowmancer", "description": "Defeat the evil Shadowmancer.\nThe Shadowmancer is an evil sorcerer which plans to plunge the world in darkness."},
+        {"name": "treasure", "description": "Find the treasure of the Fallen King.\nThis treasure is said to be immense, and contains gems worth more then entire kingdoms."}
+    ]
+}

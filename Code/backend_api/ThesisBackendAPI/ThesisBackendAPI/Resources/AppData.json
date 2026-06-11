@@ -1,0 +1,685 @@
+﻿{
+  "equipments": [
+    {
+      "name": "sword",
+      "description": "A simple straight sword, useful in combat.",
+      "compatibilities": ["right_hand", "left_hand"],
+      "characteristic": "strength",
+      "bonus": 1
+    },
+    {
+      "name": "shield",
+      "description": "A simple round shield, good for self defense.",
+      "compatibilities": ["right_hand", "left_hand"],
+      "characteristic": "resistance",
+      "bonus": 1
+    },
+    {
+      "name": "leather_boots",
+      "description": "Robust leather boots, perfect for exploration in the wild.",
+      "compatibilities": ["armor"],
+      "characteristic": "agility",
+      "bonus": 1
+    },
+    {
+      "name": "rope",
+      "description": "An old but still functioning rope, can be used in multiple creative ways.",
+      "compatibilities": ["right_hand", "left_hand", "accessory"],
+      "characteristic": "instinct",
+      "bonus": 1
+    },
+    {
+      "name": "fire_wand",
+      "description": "A wand constructed using wood from an ancient oak and a phoenix egg as catalyst, useful to fight enemies.",
+      "compatibilities": ["right_hand", "left_hand"],
+      "characteristic": "strength",
+      "bonus": 2
+    },
+    {
+      "name": "sword_of_ruin",
+      "description": "A fine crafted sword, with runes encrypted on its blade. It seems surrounded by a blue shimmering.",
+      "compatibilities": ["right_hand", "left_hand"],
+      "characteristic": "strength",
+      "bonus": 3
+    },
+    {
+      "name": "book_of_knowledge",
+      "description": "A book containing ancient knowledge, which most consider to be lost.",
+      "compatibilities": ["right_hand", "left_hand", "accessory"],
+      "characteristic": "knowledge",
+      "bonus": 1
+    },
+    {
+      "name": "necklace_of_influence",
+      "description": "An enchanted talisman, which makes the wearer appear more charming.",
+      "compatibilities": ["accessory"],
+      "characteristic": "charisma",
+      "bonus": 1
+    },
+    {
+      "name": "violin",
+      "description": "A well made violin, produces a clear and sweet sound.",
+      "compatibilities": ["right_hand", "left_hand"],
+      "characteristic": "charisma",
+      "bonus": 1
+    },
+    {
+      "name": "silk_gloves",
+      "description": "Silky, delicate gloves, helps improving the manual skills of the wearer.",
+      "compatibilities": ["armor", "accessory"],
+      "characteristic": "agility",
+      "bonus": 1
+    },
+    {
+      "name": "pendant_of_mind",
+      "description": "An enchanted pendant, improve the mental capabilities of the wearer.",
+      "compatibilities": ["accessory"],
+      "characteristic": "knowledge",
+      "bonus": 1
+    },
+    {
+      "name": "magical_key",
+      "description": "A golden key, of excellent elegance. It emanates a mysterious magical aura. Probably opens something in the castle.",
+      "compatibilities": ["accessory"],
+      "characteristic": "instinct",
+      "bonus": 3
+    },
+    {
+      "name": "mushroom_lamp",
+      "description": "A lamp obtained from a glowing mushroom. Allow for a better visual.",
+      "compatibilities": ["accessory", "right_hand", "left_hand"],
+      "characteristic": "instinct",
+      "bonus": 1
+    },
+    {
+      "name": "spear",
+      "description": "A long, well-balanced spear, useful in combat.",
+      "compatibilities": ["right_hand", "left_hand"],
+      "characteristic": "strength",
+      "bonus": 1
+    },
+    {
+      "name": "axe",
+      "description": "A simple lumberjack axe, can be used in close combat.",
+      "compatibilities": ["right_hand", "left_hand"],
+      "characteristic": "strength",
+      "bonus": 2
+    },
+    {
+      "name": "plate_armor",
+      "description": "A well made plate armor, a bit heavy but very resistant.",
+      "compatibilities": ["armor"],
+      "characteristic": "resistance",
+      "bonus": 1
+    },
+    {
+      "name": "fashionable_hat",
+      "description": "Looks like a normal hat, but it gives the feeling to have some magical properties",
+      "compatibilities": ["head"],
+      "characteristic": "charisma",
+      "bonus": 1
+    },
+    {
+      "name": "flying_cloak",
+      "description": "A magical floating cloak. Allows the wearer to move swifter.",
+      "compatibilities": ["armor"],
+      "characteristic": "agility",
+      "bonus": 2
+    },
+    {
+      "name": "enchanted_crown",
+      "description": "An ancient crown, still shimmering and charming. It emanates an aura of authority.",
+      "compatibilities": ["head"],
+      "characteristic": "charisma",
+      "bonus": 2
+    },
+    {
+      "name": "binoculars",
+      "description": "A pair of carefully crafted binoculars, allow better sight.",
+      "compatibilities": ["right_hand", "left_hand","accessory"],
+      "characteristic": "instinct",
+      "bonus": 2
+    },
+    {
+      "name": "ring_of_magic_barrier",
+      "description": "A bronze ring with the effigy of a shield on it. Wearing it give a sense of protection.",
+      "compatibilities": ["right_hand", "left_hand","accessory"],
+      "characteristic": "resistance",
+      "bonus": 2
+    },
+    {
+      "name": "wizard_hat",
+      "description": "A characteristic wizard hat. Just wearing it makes anyone feel more intelligent.",
+      "compatibilities": ["head"],
+      "characteristic": "knowledge",
+      "bonus": 2
+    },
+    {
+      "name": "spell_scroll",
+      "description": "A scroll containing formulas for ancient spells.",
+      "compatibilities": ["right_hand", "left_hand","accessory"],
+      "characteristic": "knowledge",
+      "bonus": 3
+    },
+    {
+      "name": "black_iron_greatshield",
+      "description": "A black, massive iron shield. It's extremely heavy, but offer absolute defense.",
+      "compatibilities": ["right_hand", "left_hand"],
+      "characteristic": "resistance",
+      "bonus": 3
+    }
+  ],
+  "features": [
+    {
+      "name": "fighter",
+      "description": "The character has fighting experience, and so has and advantage in physical combat.",
+      "bonuses": {
+        "fighting": 2,
+        "athletics": 1
+      }
+    },
+    {
+      "name": "survivalist",
+      "description": "The character knows their way in the nature and can get out from difficult situations.",
+      "bonuses": {
+        "surviving": 1,
+        "observing": 1,
+        "tinkering": 1,
+        "fighting": 1,
+        "spellcasting": 1
+      }
+    },
+    {
+      "name": "spellcaster",
+      "description": "The character is proficient in the use of magic, being able to cast better and more powerful spells.",
+      "bonuses": {
+        "spellcasting": 2,
+        "thinking": 1
+      }
+    },
+    {
+      "name": "smoothtalker",
+      "description": "The character knows how to use words to convince, intimidate or deceive others.",
+      "bonuses": {
+        "talking": 2,
+        "observing": 1
+      }
+    }
+  ],
+  "npcs": [
+
+    {
+      "name": "Golgi The Goblin",
+      "role" : "adventurer",
+      "description": "A small, green goblin with a tuft of red hair on the top of his head and purple eyes. He carries explorer gears, and wears a worn-out leather armor.",
+      "ability_description": "Golgi is a professional thief, with high stealth and sleight of and ability. He is also able in combat with his old, dusty bow.",
+      "statsBonuses": {
+        "fighting" : 1,
+        "athletics": 1,
+        "tinkering" : 2
+      }
+    },
+    {
+      "name": "Irina The Scholar",
+      "role" : "adventurer",
+      "description": "A shy girl, with dark skin, black curly hair and black eyes. She wears a pair of big round glasses, a wizard hat and scholars robes.",
+      "ability_description": "Irina is a formidable scholar, very knowledgeable and smart, but is also a skilled mage with great spellcasting skills.",
+      "statsBonuses": {
+        "thinking" : 2,
+        "spellcasting" : 2
+      }
+    },
+    {
+      "name": "Miriam The Warrior",
+      "role" : "adventurer",
+      "description": "An extrovert, enthusiastic girl, with orange hair arranged in two braids, brown eyes and freckles on her cheeks. She wears an heavy plate armor with a red cloak and carries a two handed halberd.",
+      "ability_description": "Miriam is extremely skilled in combat, and is very strong and athletic.",
+      "statsBonuses": {
+        "fighting" : 2,
+        "athletics" : 2
+      }
+    },
+    {
+      "name": "Roland The Prince",
+      "role" : "adventurer",
+      "description": "Roland is a young man with blonde hair and blue eyes. He wears an elegant, nobility suit, and a hat with a feather.",
+      "ability_description": "Roland his a smart, sharp and eloquent prince. He has very prominent oratory skills, and is also a keen observer.",
+      "statsBonuses": {
+        "talking" : 2,
+        "thinking" : 1,
+        "observing": 1
+      }
+    },
+    {
+      "name": "Marcus The Explorer",
+      "role" : "adventurer",
+      "description": "Marcus is a young man, with dark skin, brown hair tied up in dreadlocks and brown eyes. His long, pointy ears reveal his half-elf nature. He also has a scar on his right eye. He wears lightweight clothes, a red bandana and a golden earring on his left ear.",
+      "ability_description": "Marcus is an experienced explorer, able to survive in the most unexpected situations, and has always a keen, careful eye.",
+      "statsBonuses": {
+        "surviving" : 2,
+        "observing": 2
+      }
+    }
+  ],
+  "acts" : [
+    {
+      "number": 1,
+      "location": "Ancient Forest",
+      "introductive_prompt": "The protagonist arrive to the borders of the Ancient Forest. The Ruined Castle, their destination, lays at heart of this forest. The protagonist must traverse this old an dangerous forest, of which they heard only trough legends. The protagonist take a deep breath, then enters the Forest.",
+      "rooms": [
+        {
+          "id": 1,
+          "description": "A small clearing in the middle of the forest.",
+          "characters" : ["Golgi The Goblin", "Irina The Scholar"],
+          "events" : ["Axe"],
+          "paths": ["A wide path leading forward, in the depths of the forest"],
+          "connections": [1000]
+        },
+        {
+          "id": 2,
+          "description": "A niche between the old, gigantic trees. Barely any light filter from the treetops.",
+          "characters" : [],
+          "events" : ["Ancient Tree"],
+          "paths": ["A path leading to a clearer, younger part of the forest", "A path which leads forward, on the other out of the the oldest part of the forest"],
+          "connections": [1,6]
+        },
+        {
+          "id": 5,
+          "description": "A dark, creepy cave. If not illuminated, this grotto remains completely dark. Strange noises comes from the deepest darkest part of the cave.",
+          "characters" : [],
+          "events" : ["The Pale One"],
+          "paths": ["A path going outside the cave"],
+          "connections": [2]
+        },
+        {
+          "id": 6,
+          "description": "A niche between the old, gigantic trees. Barely any light filter from the treetops.",
+          "characters" : ["Marcus The Explorer"],
+          "events" : ["Wolves"],
+          "paths": ["A path leading back to a clearer, younger part of the forest","A path which leads forward, out of the the oldest part of the forest"],
+          "connections": [2, 8]
+        },
+        {
+          "id": 3,
+          "description": "A small clearing covered by mysterious glowing mushrooms",
+          "characters" : ["Irina The Scholar"],
+          "events" : ["Glowing Mushroom"],
+          "paths": ["A path leading back to a clearer part of the forest, where mushroom are less numerous and bright", "A path which leads forward, out of the fungal wastes"],
+          "connections": [1,8]
+        },
+        {
+          "id": 7,
+          "description": "A small clearing covered by mysterious glowing mushrooms",
+          "characters" : [],
+          "events" : ["Mushroom Monster"],
+          "paths": ["A path where the light emitted by the mushroom seems brighter.", "A path leading to a clearer part of the forest, where mushroom are less numerous and bright"],
+          "connections": [3,8]
+        },
+        {
+          "id": 4,
+          "description": "A wide zone where trees are younger and less dense.",
+          "characters" : [],
+          "events" : ["Golden Lamp"],
+          "paths": ["A path leading back to the beginning of the forest", "A path leading further into the forest"],
+          "connections": [1,8]
+        },
+        {
+          "id": 8,
+          "description": "A small clearing acting as a crossroad in the middle of the forest",
+          "characters" : [],
+          "events" : [],
+          "paths": ["A dark path, going into oldest part of the forest","A wide path leading out of the Ancient Forest, to the surroundings of the Ruined Castle.", "A path where mushrooms seems to emit some light"],
+          "connections": [1000,3]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "location": "Ruined Castle",
+      "introductive_prompt": "The protagonist exit from the Ancient Forest, arriving in the valley at its heart, and now find themselves in front of the wide open gates of the Ruined Castle.",
+      "rooms": [
+        {
+          "id": 2,
+          "description": "The courtyard of the castle, a wide space that is now desolated",
+          "characters" : ["Miriam The Warrior"],
+          "events" : ["The Flying Cloak"],
+          "paths": ["The old and dusty main entrance, that give access to the castle"],
+          "connections": [2]
+        },
+        {
+          "id": 1,
+          "description": "The throne hall, big and sumptuous, once would have been splendid, now is dusty and ruined.",
+          "characters" : ["Miriam The Warrior"],
+          "events" : ["The Chest"],
+          "paths": ["Stairs to the left, leading deep down in the castle dungeon, the path to move forward"],
+          "connections": [7]
+        },
+        {
+          "id": 3,
+          "description": "Descending stairs leads to the castle's dungeons, dark and creepy. This room is completely dark, unless the protagonist has a source of light with them.",
+          "characters" : [],
+          "events" : ["The Pale One"],
+          "paths": ["Stairs going up, leading back to the throne hall", "Stairs going up, leading out of the dungeons"],
+          "connections": [1,7]
+        },
+        {
+          "id": 5,
+          "description": "The deepest part of the castle's dungeons, strange sounds comes from the walls. This room is completely dark, unless the protagonist has not a source of light with them.",
+          "characters" : [],
+          "events" : ["Weeping Ghost"],
+          "paths": ["A dark corridor, leading deeper into the dungeon","Stairs going up, leading out of the dungeons"],
+          "connections": [3,7]
+        },
+        {
+          "id": 4,
+          "description": "A wide hallway, with walls and columns collapsed, making movement difficult",
+          "characters" : [],
+          "events" : ["The Trolls"],
+          "paths": ["A corridor leading back to the thorne hall", "A door leading to another room, deeper in the eastern wing of the castle."],
+          "connections": [2,6]
+        },
+        {
+          "id": 6,
+          "description": "The king's advisor private room, forsaken from many years. Even if old, dusty and abandoned, it still shows its old luxury.",
+          "characters" : ["Roland The Prince"],
+          "events" : ["The Chest"],
+          "paths": ["An hallway leading back to the throne hall", "A door leading forward, out of the eastern wing of the castle"],
+          "connections": [2,7]
+        },
+        {
+          "id": 7,
+          "description": "A wide hall, once beautiful and sumptuous, now crumbing",
+          "characters" : [],
+          "events" : ["Alken the Mad Knight"],
+          "paths": ["Ascending stairs, leading to the throne hall", "A gigantic door, that seems to lead to the deepest, oldest part of the castle. The protagonist objective probably lies on the other side of the door. the path to move forward"],
+          "connections": [1, 1000]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "location": "Ruined Castle depths",
+      "introductive_prompt": "The protagonist has faced many perlis, and is now arrived to the deepest part of the Ruined Castle. After wondering within the desolated halls of the inner castle, the protagonist spot a large old door, half opened. The protagonist can't see inside the room, but they have the strong feeling that their objective lies behind that door.",
+      "rooms": [
+        {
+          "id": 1,
+          "description": "A big, once luxurious room. It looks like a memorial room. At the center of the room there is what appear to be grave, with no name on it, just adorned with beautiful flower. The opposite side of the room is torn, and it overlooks an enormous chasm.",
+          "characters" : [],
+          "events" : ["the fallen King"],
+          "paths": ["The way to go back, leave this place and end the adventure."],
+          "connections": [1000]
+        },
+        {
+          "id": 2,
+          "description": "A gigantic chasm, completely filled with treasures of all kind. There are golden coins, shimmering gems, incredible artefacts. All there accumulated and dusty, the treasure still shines under the sun rays, coming from the collapsed roof of what once was the treasure hall of the Ruined Castle",
+          "characters" : [],
+          "events" : ["Dragon of Ruins"],
+          "paths": ["The way to go back, leave this place and end the adventure."],
+          "connections": [1000]
+        },
+        {
+          "id": 3,
+          "description": "A wide rooftop of the tallest tower of the castle, where the whole valley around can be seen.",
+          "characters" : [],
+          "events" : ["Shadowmancer's Army"],
+          "paths": ["The way to go back, leave this place and end the adventure."],
+          "connections": [1000]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "location": "The Way Home",
+      "introductive_prompt": "The Protagonist has achieved their goal and ended their adventure. He leave the Ruined Castle, to return home.",
+      "rooms": [
+      ]
+    }
+  ],
+  "events" : [
+    {"name":  "Axe",
+      "description": "An axe stuck in a tree. It seems to be stuck very deeply, but with enough strength or with some kind of strategy could be pulled out.",
+      "difficulty": {
+        "athletics": {"cd": 5, "prizes": ["axe"]},
+        "spellcasting": {"cd": 6, "prizes": ["axe"]},
+        "fighting" : {"cd": 7 , "prizes": ["axe"]},
+        "tinkering": {"cd": 7, "prizes": ["axe"]},
+        "observing": {"cd": 3, "prizes": "the character confirm that, in fact, is just an axe stuck in a tree"}
+      }
+    },
+    {
+      "name":  "Ancient Tree",
+      "description": "An ancient tree with a big, deep hole that reveal a cavity inside. Something shimmer inside the cavity, maybe a treasure.",
+      "difficulty": {
+      "spellcasting": {"cd": 5, "prizes": ["pendant_of_mind"]},
+      "surviving" : {"cd": 8 , "prizes": ["pendant_of_mind"]},
+      "observing": {"cd": 6, "prizes": "the character notice a strange magical aura within the cavity. They understand that the tree is cursed, maybe a spell to protect the treasure inside."}
+    }
+    },
+    {
+      "name":  "The Pale One",
+      "description": "A silhouette in the dark, vaguely resembling a human being. It appear to be very tall. Its yellow glowing eyes shine in the dark. Its voice is a hiss, that makes blood run cold. This creature show interest in the adventurer, but its also menacing.",
+      "difficulty": {
+        "spellcasting": {"cd": 10, "prizes": ["magical_key"]},
+        "talking" : {"cd": 8 , "prizes": ["magical_key"]},
+        "fighting": {"cd": 12 , "prizes": ["magical_key"]},
+        "observing": {"cd": 13, "prizes": "The character better focuses on the creature. He manage to see that the creature is not actually that tall, but is grabbed on the wall like a spider. Its arms and legs are disproportionately long, and its skin extremely pale, almost transparent. His mouth is very large, with teeth sharp like blades. Its expression reveal hunger."}
+      },
+      "bonus_object": {
+        "observing": "mushroom_lamp"
+      }
+  },
+    {
+      "name":  "Wolves",
+      "description": "A pack of wolves surround the character, circulating around them threateningly, preventing every escape attempt.",
+      "difficulty": {
+        "spellcasting": {"cd": 9, "prizes": "The character manage to make the wolf run away or cease any hostility, and is now free to move"},
+        "talking" : {"cd": 7 , "prizes": "The character manage to make the wolf run away or cease any hostility, and is now free to move"},
+        "fighting": {"cd": 10 , "prizes": "The character manage to make the wolf run away or cease any hostility, and is now free to move"},
+        "surviving": {"cd": 10, "prizes": "The character manage to make the wolf run away or cease any hostility, and is now free to move"}
+      },
+      "block_path": true
+    },
+    {
+      "name":  "Glowing Mushroom",
+      "description": "An intensely glowing mushroom, which illuminate very well the surroundings.",
+      "difficulty": {
+        "spellcasting": {"cd": 7, "prizes": ["mushroom_lamp"]},
+        "athletics" : {"cd": 6 , "prizes": ["mushroom_lamp"]},
+        "fighting": {"cd": 7 , "prizes": ["mushroom_lamp"]},
+        "tinkering": {"cd": 6, "prizes": ["mushroom_lamp"]},
+        "observing": {"cd": 7, "prizes": "the character understands that the mushrooms can be used as a lamp or a torch. They just need to eradicate or cut it."}
+      }
+    },
+    {
+      "name":  "Mushroom Monster",
+      "description": "A big, menacing mushroom monster stands under the shadow of a big mushroom. It looks like the corpse of an old warrior, taken over by fungus.",
+      "difficulty": {
+        "spellcasting": {"cd": 9, "prizes": ["spear", "plate_armor"]},
+        "fighting": {"cd": 9 , "prizes": ["spear", "plate_armor"]},
+        "observing": {"cd": 8, "prizes": "the character notice that the monster wields a long spear and wears a plate armor, both still in good conditions. If defeated, the item could probably be retrieved. However, the monster look strong, and it can't probably be talked to."}
+      }
+    },
+    {
+      "name":  "The Flying Cloak",
+      "description": "A magical cloak flies around, out of control. It probably belonged to a wizard once.",
+      "difficulty": {
+        "spellcasting": {"cd": 9, "prizes": ["flying_cloak"]},
+        "athletics": {"cd": 12 , "prizes": ["flying_cloak"]}
+      }
+    },
+    {
+      "name":  "Bandits",
+      "description": "A group of bandit looting the castle. They threaten the protagonist and their party to stay away, but not attack right away.",
+      "difficulty": {
+        "spellcasting": {"cd": 6, "prizes": ["enchanted_crown","binoculars"]},
+        "fighting": {"cd": 7 , "prizes": ["enchanted_crown","binoculars"]},
+        "talking": {"cd": 7 , "prizes": ["enchanted_crown","binoculars"]}
+        
+      }
+    },
+    {
+      "name":  "Weeping Ghost",
+      "description": "A ghost lingering on a skeleton. The ghost is crying, out of desperation. The skeleton hand is clenched, and something shimmering can be seen trough the skeletal fingers.",
+      "difficulty": {
+        "spellcasting": {"cd": 15, "prizes": ["ring_of_magic_barrier"]},
+        "thinking": {"cd": 10 , "prizes": ["ring_of_magic_barrier"]}
+      }
+    },
+    {
+      "name":  "The Trolls",
+      "description": "Two trolls which are playing cards. They seems to not have noticed the protagonist yet, but they might attack if they notice them.",
+      "difficulty": {
+        "athletics": {"cd": 8, "prizes": "The protagonist and their party manages get pasts the Trolls and to move forward"},
+        "talking": {"cd": 15 , "prizes": ["wizard_hat"]},
+        "fighting": {"cd": 10 , "prizes": ["wizard_hat"]},
+        "spellcasting": {"cd": 9 , "prizes": ["wizard_hat"]}
+      },
+      "block_path": true
+    },
+    {
+      "name":  "The Chest",
+      "description": "A luxurious, elegant chest. It has a shining gold lock, which emanates a somewhat magical golden aura.",
+      "difficulty": {
+        "athletics": {"cd": 12, "prizes": ["spell_scroll","sword_of_ruin"]},
+        "tinkering": {"cd": 7 , "prizes": ["spell_scroll","sword_of_ruin"]},
+        "fighting": {"cd": 12 , "prizes": ["spell_scroll","sword_of_ruin"]},
+        "spellcasting": {"cd": 8 , "prizes": ["spell_scroll","sword_of_ruin"]}
+      },
+      "bonus_object": {
+        "tinkering": "magical_key"
+      }
+    },
+    {
+      "name":  "Alken the Mad Knight",
+      "description": "An incredible tall and mighty knight, wearing an heavy black armor. He wields an immense shield and a gigantic sword. He immediately attack the protagonist at sight. There is no escape from him.",
+      "following_event": "Alken The Mad Knight",
+      "difficulty": {
+        "talking": {"cd": 9 , "prizes": "Alken seems to have listened to the protagonist for a moment, but then he attack again, like a fury"},
+        "fighting": {"cd": 7 , "prizes": "Alken seems to have accused the protagonist's attack but then he raises again and attack, like a fury"},
+        "spellcasting": {"cd": 7 , "prizes": "Alken seems to have accused the protagonist's spell but then he raises again and attack, like a fury"}
+      },
+      "block_path": true
+    },
+    {
+      "name":  "Alken The Mad Knight",
+      "following_event": "Alken defeated",
+      "description": "The enormous knight is still fighting. However, it seems that he is wavering. It can be defeated.",
+      "difficulty": {
+        "fighting": {"cd": 5 , "prizes": ["black_iron_greatshield", "magical_key"]},
+        "spellcasting": {"cd": 5 , "prizes": ["black_iron_greatshield", "magical_key"]}
+      },
+      "block_path": true
+    },
+    {
+      "name":  "Alken defeated",
+      "description": "Alken has been knock unconscius by the protagonist's action. He lays on the ground, unresponsive",
+      "difficulty": {
+      }
+    },
+    {
+      "name":  "Golden Lamp",
+      "description": "A golden, dusty lamp, laid on a rock. If the character rub the lamp, a genie will make its appearance. If asked about wishes, the genie will say that he is not a normal genie, but an hat genie. He offers to give the character a good hat if he makes him laugh",
+      "difficulty": {
+        "talking": {
+          "cd": 4,
+          "prizes": [
+            "fashionable_hat"
+          ]
+        }
+      }
+    },
+    {
+      "name":  "the fallen King",
+      "description": "An old man is sitting by the the verge of the chasm. He is staring at the abyss below, with a gloomy expression. He wears a refined armor, now old and rusty. And on his head stands the Mystical Crown.",
+      "following_event": "the Fallen King",
+      "difficulty": {
+        "talking": {"cd": 6 , "prizes": "The King seems little interested in the Protagonist's word. However, he turns his gaze upon the protagonist. His expression betrays sorrow."},
+        "fighting": {"cd": 8 , "prizes": "The King is not even scratched by the Protagonist's attack. However, it seems that the Protagonist's determination has gotten his interest."},
+        "spellcasting": {"cd": 8 , "prizes": "The King is not even scratched by the Protagonist's spells. However, it seems that the Protagonist's determination has gotten his interest."}
+      },
+      "block_path": true
+    },
+    {
+      "name":  "the Fallen King",
+      "description": "The Protagonist's action seems to have caught the attention of the King. He now stands up, in all his might, in front of the Protagonist. The King challenge the Protagonist to convince him, one way or the other, to give out the Crown.",
+      "following_event": "The Fallen King",
+      "difficulty": {
+        "talking": {"cd": 4 , "prizes": "The Protagonist's words resonate with the King. He smiles for the first time in many years. He takes the Crown and hand it to the Protagonist, inviting them to make a good use of it. Then goes back to sit on the pit, in the same poistion as before."},
+        "fighting": {"cd": 8 , "prizes": "The insistence of the attacks of the Protagonist allow them to manage to scratch a bit the King. The King is moved by the Protagonist's determination. He smiles for the first time in many years. He takes the Crown and hand it to the Protagonist, inviting them to make a good use of it. Then goes back to sit on the pit, in the same poistion as before."},
+        "spellcasting": {"cd": 8 , "prizes": "The King is not even scratched by the Protagonist's spells. However, it seems that the Protagonist's determination has gotten his interest."}
+      },
+      "block_path": true
+    },
+    {
+      "name":  "The Fallen King",
+      "description": "The King has again started to stare into the abyss beneath him, seated on the torn side of the room. He is now unresponsive to any action of the Protagonist.",
+      "difficulty": {}
+    },
+    {
+      "name":  "Dragon of Ruins",
+      "description": "While the Protagonist and their companion are staring at the majestic treasure, a terrifying roar shakes the earth. A colossal flying dragon lands on top of the treasure, and lay its dreadful gaze upon the Protagonist and their party, waiting for their move.",
+      "following_event": "The Flame",
+      "difficulty": {
+        "talking": {"cd": 9 , "prizes": "The Protagonist's words seems to have a certain effect on the dragon. However, his gaze do not seem less threatening."},
+        "fighting": {"cd": 7 , "prizes": "The Protagonist manage to damage the dragon with their fighting skill. The creature retreat briefly away from the Protagonist's attacks, its eyes now burning with fury."},
+        "spellcasting": {"cd": 8 , "prizes": "The Protagonist spell seems affects the dragon. However, when the creature rises its head, its eyes are burning with fury."}
+      },
+      "block_path": true
+    },
+    {
+      "name":  "The Flame",
+      "description": "The Dragon breathe in, and then release a terrible burst of flame from its mouth onto the Protagonist. The Protagonist sees the flame, and will have to act.",
+      "following_event": "The Dragon of Ruins",
+      "difficulty": {
+        "athletics": {"cd": 5 , "prizes": "The Protagonist elude the flame completely, and remains undamaged"},
+        "surviving": {"cd": 5 , "prizes": "The Protagonist resist the flame completely, and remains undamaged"},
+        "spellcasting": {"cd": 5 , "prizes": "The Protagonist use a spell to defend against the flame, and remains undamaged."}
+      },
+      "block_path": true
+    },
+    {
+      "name":  "The Dragon of Ruins",
+      "description": "Once again the dragon advances, staring directly in the Protagonist's eyes, waiting for their next move",
+      "following_event": "The Treasure of the Fallen King",
+      "difficulty": {
+        "talking": {"cd": 12 , "prizes": "The Protagonist's words seems to have affected the Dragon. The creature seem almost bow in front of the Protagonist, before take flight and leaving the treasure unguarded."},
+        "fighting": {"cd": 6 , "prizes": "The Protagonist's fighting skill overwhelm the Dragon, that retreat wounded. The creature looks once again the Protagonist in the eye, with a mixture of hate and respect, before take flight and leaving the treasure unguarded."},
+        "spellcasting": {"cd": 7 , "prizes": "The Protagonist's powerful spell overwhelm the Dragon, that succumb to its effect. The creature looks once again the Protagonist in the eye, with a mixture of hate and respect, before take flight and leaving the treasure unguarded."}
+      },
+      "block_path": true
+    },
+    {
+      "name":  "The Treasure of the Fallen King",
+      "description": "The treasure rest now unguarded, waiting for the Protagonist and their companions to take it.",
+      "difficulty": {
+        "talking": {"cd": 0, "prizes":  null},
+        "fighting": {"cd": 0 , "prizes":  null},
+        "spellcasting": {"cd": 0 , "prizes":  null},
+        "athletics": {"cd": 0, "prizes":  null},
+        "surviving": {"cd": 0 , "prizes":  null},
+        "tinkering": {"cd": 0 , "prizes":  null},
+        "observing": {"cd": 0 , "prizes":  null},
+        "thinking": {"cd": 0 , "prizes":  null}
+      }
+    },
+    {
+      "name":  "Shadowmancer's Army",
+      "description": "Curved on a black, large cauldron, the Shadowmancer is chanting obscure words, in order to cast his ultimate spell, that will plunge the world in darkness. When he notices the Protagonist and their companion, he is irritated, and summons an army of shadow monsters to fight the intruders, while he continues his ritual. The army block the Protagonist from reaching the Shadowmancer.",
+      "following_event": "The Shadowmancer",
+      "difficulty": {
+        "fighting": {"cd": 6 , "prizes": "The Protagonist defeat the shadow monsters"},
+        "spellcasting": {"cd": 6 , "prizes": "The Protagonist defeat the shadow monsters"}
+      },
+      "block_path": true
+    },
+    {
+      "name":  "The Shadowmancer",
+      "description": "The Shadowmancer appear irritaed by the defeat of his army, and now attacks the Protagonist and their group directly, using his powerful Shadow Spells.",
+      "difficulty": {
+        "fighting": {"cd": 7 , "prizes": "the shadowmancer is defeated, his shadowy form begins to crumble. Confused, he falls into his own cauldron, where he is swallowed by the darkness he was conjuring."},
+        "spellcasting": {"cd": 7 , "prizes": "the shadowmancer is defeated, his shadowy form begins to crumble. Confused, he falls into his own cauldron, where he is swallowed by the darkness he was conjuring."}
+      },
+      "block_path": true
+    }
+  ]
+}

@@ -1,0 +1,588 @@
+* {
+  box-sizing: border-box;
+}
+
+.book {
+
+  display: flex;
+    /* Dimensioni */
+  width: 1200px;           /* Larghezza fissa */
+  height: 1000px;          /* Altezza fissa */
+  /* Oppure dimensioni relative */
+  width: 70%;             /* Percentuale rispetto al contenitore */
+  height: 80%;           /* Altezza automatica in base al contenuto */
+  
+  /* Posizione */
+  position: absolute;     /* o absolute, fixed, sticky */
+  top: 100px;             /* spostamento dall'alto */
+  left: 100px;            /* spostamento da sinistra */
+  right: 0;              /* spostamento da destra */
+  bottom: 0;             /* spostamento dal basso */
+  
+  /* Sfondo - usando variabili di index.css */
+  background: var(--book-bg);     /* Sfondo con accento (semitrasparente) */
+  /* Oppure */
+  background-color: var(--book-bg);       /* Sfondo principale */
+  /* Oppure */
+  background: var(--book-bg);        /* Sfondo come blocchi codice */
+  
+  /* Altro utile */
+  margin: 10px;           /* spazio esterno */
+  padding: 20px;          /* spazio interno */
+  border-radius: 8px;     /* angoli arrotondati */
+  border: 10px solid var(--book-border);  /* bordo usando colore bordo */
+}
+
+.page_left {
+  width: 500px;           /* Larghezza fissa */
+  height: 800px;          /* Altezza fissa */
+  /* Oppure dimensioni relative */
+  width: 50%;             /* Percentuale rispetto al contenitore */
+  height: 100%;        /* Altezza automatica in base al contenuto */
+
+  position: relative;     /* o absolute, fixed, sticky */
+  top: 0;             /* spostamento dall'alto */
+  left: 10px;            /* spostamento da sinistra */
+  right: 0;              /* spostamento da destra */
+  bottom: 0;             /* spostamento dal basso */
+
+  border-right: 5px solid var(--accent-border);  /* bordo usando colore bordo */
+
+  flex: 1;
+}
+.page_right {
+  width: 500px;           /* Larghezza fissa */
+  height: 800px;          /* Altezza fissa */
+  /* Oppure dimensioni relative */
+  width: 50%;             /* Percentuale rispetto al contenitore */
+  height: 100%;        /* Altezza automatica in base al contenuto */
+
+  position: relative;     /* o absolute, fixed, sticky */
+  top: 0;             /* spostamento dall'alto */
+  left: 0;            /* spostamento da sinistra */
+  right: 10px;              /* spostamento da destra */
+  bottom: 0;             /* spostamento dal basso */
+
+  border-left: 5px solid var(--accent-border);  /* bordo usando colore bordo */
+
+  flex: 1;
+}
+
+.app_button {
+  width: 210px;
+  height: 90px;
+  background-color: var(--button-bg); /* Colore di sfondo del pulsante */
+  color: var(--text); /* Colore del testo del pulsante */
+  border: 7px solid var(--button-border); /* Bordo del pulsante */
+  padding: 10px 20px; /* Spaziatura interna del pulsante */
+  border-radius: 20px; /* Angoli arrotondati del pulsante */
+  cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
+  font-size: 37px; /* Dimensione del testo del pulsante */
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s; /* Transizione per l'effetto hover */
+  box-shadow: var(--shadow); /* Aggiunge un'ombra al pulsante */
+  text-align: center;
+}
+
+.selector_button {
+  /* Stili normali del bottone */
+  width: 800px;
+  height: 134px;
+  padding: 10px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  /* Usa le variabili del tuo tema */
+  background-color: var(--sl-button-bg);
+  color: var(--text);
+  border: 7px solid var(--sl-button-border);
+  box-shadow: var(--shadow);
+}
+
+/* Classe condizionale - solo quando selezionato */
+.selector_button.selected {
+  /* Stili per lo stato selezionato */
+  background-color: var(--selected-bg);
+  color: var(--text);
+  border: 14px solid var(--selected-border);
+  box-shadow: none;
+}
+
+.button_list {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.characteristic_value {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+
+  padding: 5px;
+  gap: 10px;
+
+  width: 92px;
+  height: 36px;
+
+  background-color: var(--container-bg);
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--text);
+
+  border-radius: 10px;
+}
+
+.characteristics_list{
+  display: grid;
+  grid-template-rows: 40px 40px 40px;
+  grid-auto-flow: column;
+  gap: 30px;
+  justify-content: center;  /* centra la griglia */
+}
+
+.hover-container {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  width: auto;
+  vertical-align: top;
+}
+
+.hover-container .tooltip {
+  visibility: hidden;
+  isolation: isolate;
+  opacity: 0;
+  position: absolute;
+  z-index: 9999;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+  background-color: var(--book-bg, white);
+  color: var(--text-h, black);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--book-border, #ccc);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  pointer-events: none;
+  white-space: nowrap;
+  gap: 0px;
+  font-size: 18px;
+}
+
+/* Mostra il tooltip al hover */
+.hover-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Triangolino del tooltip */
+.hover-container .tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--bg, white) transparent transparent transparent;
+}
+
+.hover-container .tooltip::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--border, #ccc) transparent transparent transparent;
+  margin-top: -1px;
+}
+
+.feature {
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px;
+
+  width: 100px;
+  height: 35px;
+
+  background-color: var(--feature-bg);
+  border-color: var(--accent-border);
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text);
+
+  border-radius: 10px;
+}
+
+
+.features_list {
+  margin: 0 auto;
+  padding: 0;
+  justify-self: center;
+}
+
+.element_container{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--container-bg);
+  border-radius: 10px;
+}
+
+/* CSS corrispondente */
+.element_container.horizontal {
+  width: 385px;
+  height: 190px;
+}
+
+.element_container.vertical {
+  width: 250px;
+  height: 180px;
+}
+
+.features_list.horizontal {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+}
+
+.features_list.vertical {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.draggable-item {
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.draggable-item:active {
+  cursor: grabbing;
+}
+
+.card {
+  width: 90px;
+  height: 130px;
+  background-color: var(--card-bg);
+  border: 5px solid var(--card-border);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.equipment-slot {
+  transition: all 0.2s;
+  width: 99px;
+  height: 143px;
+  background: var(--slot-bg);
+  border: 5px solid var(--slot-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.equipment-slot.drag-over {
+  background: var(--slot-bg);
+  border-color: var(--slot-border);
+  transform: scale(1.02);
+}
+
+.empty-slot {
+  background: var(--slot-bg);
+  border-color: var(--slot-border);
+  color: var(--text);
+  opacity: 0.6;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.equipped-card {
+  background: var(--slot-bg);
+  border-color: var(--slot-border);
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.inventory {
+  width: 400px;
+  height: 190px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 10px;
+  flex-wrap: nowrap;       /* Impedisce il wrapping su più righe */
+  overflow-x: auto;        /* Abilita lo scroll orizzontale */
+  overflow-y: hidden;      /* Nasconde lo scroll verticale (opzionale) */
+  background-color: var(--container-bg);
+  border-radius: 10px;
+}
+
+.character-sheet {
+  background-color: var(--character-sheet-bg);
+  border: 2px solid var(--character-sheet-border);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.title-box1 {
+  width: 423px;
+  height: 155px;
+  background: url('/assets/ui_elements/title-box1.png') center/cover no-repeat;
+  color: var(--text-h);
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 47px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.title-box2 {
+  width: 264px;
+  height: 139px;
+  background: url('/assets/ui_elements/title-box2.png') center/cover no-repeat;
+  color: var(--text-h);
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 54px;
+  font-size: 25px;
+}
+
+.character-name-requester{
+  width: 400px;
+  height: 60px;
+  background-color: transparent;
+  color: var(--text-h);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 30px;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.description-input {
+  width: 1000px;
+  height: 1000px;
+  background-color: transparent;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  text-align: left;
+  font-weight: normal;
+  font-size: 28px;
+}
+
+.narration_text {
+  /* Dimensioni della pagina */
+  width: 1150px;
+  height: 1400px;
+  
+  /* Gestione del testo lungo */
+  overflow-y: auto;        /* Scroll verticale se necessario */
+  overflow-x: hidden;      /* Nasconde scroll orizzontale */
+  
+  /* Spaziatura interna */
+  padding: 20px;
+  
+  /* Stile del testo */
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.8;
+  text-align: justify;     /* Giustifica il testo */
+  
+  /* Aspetto visivo */
+  background-color: transparent;
+  color: var(--text);
+  
+  /* Comportamento */
+  word-wrap: break-word;    /* Spezza le parole lunghe */
+  white-space: normal;      /* Permette il wrapping */
+}
+
+/* Aggiungi queste regole */
+.draggable-item, 
+.equipment-card, 
+.card[draggable="true"],
+[data-draggable="true"] {
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.draggable-item:active, 
+.equipment-card:active {
+  cursor: grabbing;
+}
+
+/* Assicura che tutti i contenitori siano trasparenti agli eventi */
+.character-sheet,
+.equipment-container,
+.equipment-slot,
+.hover-container {
+  pointer-events: auto;  /* Assicura che gli eventi passino */
+}
+
+/* Verifica che nessun elemento sovrapposto blocchi il drag */
+.hover-container .tooltip {
+  pointer-events: none;  /* OK, questo è corretto */
+}
+
+.equipment-slot {
+  transition: all 0.2s;
+  width: 99px;
+  height: 143px;
+  background: var(--slot-bg);
+  border: 5px solid var(--slot-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.equipment-slot::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  background: transparent;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.equipment-slot > * {
+  position: relative;
+  z-index: 2;
+}
+
+.equipment-slot.drag-over {
+  background: var(--slot-bg);
+  border-color: var(--slot-border);
+  transform: scale(1.02);
+}
+
+.empty-slot {
+  background: var(--slot-bg);
+  border-color: var(--slot-border);
+  color: var(--text);
+  opacity: 0.6;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.equipment-card {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;    
+}
+
+.equipment-card img {
+  pointer-events: none;  /* Opzionale: fa passare gli eventi attraverso l'immagine */
+  -webkit-user-drag: none;
+}
+
+.tooltip-portal {
+  position: fixed;
+  z-index: 99999;
+  background-color: var(--book-bg, white);
+  color: var(--text-h, black);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--book-border, #ccc);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  font-size: 18px;
+  line-height: 1.4;
+  white-space: nowrap;
+  max-width: 300px;
+  white-space: normal;
+  word-wrap: break-word;
+  
+  /* Animazione opzionale */
+  animation: tooltipFadeIn 0.15s ease-in-out;
+}
+
+/* Triangolino (opzionale) */
+.tooltip-portal::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: var(--book-border, #ccc) transparent transparent transparent;
+}
+
+.tooltip-portal::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px 5px 0 5px;
+  border-style: solid;
+  border-color: var(--book-bg, white) transparent transparent transparent;
+}
+
+.id-box {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Animazione */
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-5px); 
+  }
+  to {
+    opacity: 1;
+     transform: translateX(-50%) translateY(0);
+  }
+}
