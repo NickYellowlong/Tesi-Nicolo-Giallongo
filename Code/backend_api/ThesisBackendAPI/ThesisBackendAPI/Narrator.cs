@@ -131,10 +131,25 @@ public class Narrator
         prompt += "Motivation: " + WorldStateInfo.motivation + "\n\n";
         prompt += "Knowledge: " + WorldStateInfo.character.characteristics.knowledge;
         prompt += "\n\n";
+        try
+        {
         if (WorldStateInfo.party != null && WorldStateInfo.party.Count > 0)
-            prompt += "PARTY: " + WorldStateInfo.party.Aggregate("", (current, party) => current + "\n" + party.name + ": " + party.description) + "\n\n\n";
-        if (WorldStateInfo.characterEquips.Values != null && WorldStateInfo.characterEquips.Count > 0)
-            prompt += "EQUIPMENTs: " + WorldStateInfo.characterEquips.Values != null ? WorldStateInfo.characterEquips.Values.Aggregate("", (current, equip) => current + ", " + equip.Value.name) : "";
+                    prompt += "PARTY: " + WorldStateInfo.party.Aggregate("", (current, party) => current + "\n" + party.name + ": " + party.description) + "\n\n\n";
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+
+        try
+        {
+            if ((WorldStateInfo.characterEquips.Values != null && WorldStateInfo.characterEquips.Count > 0) || (WorldStateInfo.inventory.Count > 0 && WorldStateInfo.inventory.Count > 0))
+                prompt += "EQUIPMENTS: " + (WorldStateInfo.characterEquips.Values != null ? WorldStateInfo.characterEquips.Values.Aggregate("", (current, equip) => current + ", " + (equip.HasValue? equip.Value.name : "")) : "") + (WorldStateInfo.inventory != null ? WorldStateInfo.inventory.Aggregate("", (current, equip) => current + ", " + (equip.HasValue? equip.Value.name : "")) : "");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
         return prompt;
     }
 

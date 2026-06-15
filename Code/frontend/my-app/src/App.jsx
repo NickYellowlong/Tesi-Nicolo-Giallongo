@@ -660,6 +660,7 @@ function EquipmentContainer({ equippedItems, active }) {
 function InventoryContainer({ inventory }) {
   
   // Se non è un array, trasformalo
+  console.log("user id: ", useGameState.getState().user_id)
   console.log("inventory: ", inventory)
   const safeInventory = Array.isArray(inventory) ? inventory : [];
   console.log("safeInventory: ", safeInventory)

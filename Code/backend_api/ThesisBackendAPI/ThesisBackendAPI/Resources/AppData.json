@@ -556,7 +556,9 @@
       "difficulty": {
         "talking": {"cd": 9 , "prizes": "Alken seems to have listened to the protagonist for a moment, but then he attack again, like a fury"},
         "fighting": {"cd": 7 , "prizes": "Alken seems to have accused the protagonist's attack but then he raises again and attack, like a fury"},
-        "spellcasting": {"cd": 7 , "prizes": "Alken seems to have accused the protagonist's spell but then he raises again and attack, like a fury"}
+        "spellcasting": {"cd": 7 , "prizes": "Alken seems to have accused the protagonist's spell but then he raises again and attack, like a fury"},
+        "thinking": {"cd": 7 , "prizes": "The protagonist outsmarts Alken, causing him damage and confusion, but then he raises again and attack, like a fury"},
+        "tinkering": {"cd": 7 , "prizes": "The protagonist action have effect on Alken but then he raises again and attack, like a fury"}
       },
       "block_path": true
     },
@@ -622,7 +624,9 @@
       "difficulty": {
         "talking": {"cd": 9 , "prizes": "The Protagonist's words seems to have a certain effect on the dragon. However, his gaze do not seem less threatening."},
         "fighting": {"cd": 7 , "prizes": "The Protagonist manage to damage the dragon with their fighting skill. The creature retreat briefly away from the Protagonist's attacks, its eyes now burning with fury."},
-        "spellcasting": {"cd": 8 , "prizes": "The Protagonist spell seems affects the dragon. However, when the creature rises its head, its eyes are burning with fury."}
+        "spellcasting": {"cd": 8 , "prizes": "The Protagonist spell seems affects the dragon. However, when the creature rises its head, its eyes are burning with fury."},
+        "thinking": {"cd": 7 , "prizes": "The protagonist outsmarts the Dragon, causing him damage and confusion."},
+        "tinkering": {"cd": 7 , "prizes": "The protagonist action has effect on the Dragon, causing damage."}
       },
       "block_path": true
     },
@@ -677,7 +681,9 @@
       "description": "The Shadowmancer appear irritaed by the defeat of his army, and now attacks the Protagonist and their group directly, using his powerful Shadow Spells.",
       "difficulty": {
         "fighting": {"cd": 7 , "prizes": "the shadowmancer is defeated, his shadowy form begins to crumble. Confused, he falls into his own cauldron, where he is swallowed by the darkness he was conjuring."},
-        "spellcasting": {"cd": 7 , "prizes": "the shadowmancer is defeated, his shadowy form begins to crumble. Confused, he falls into his own cauldron, where he is swallowed by the darkness he was conjuring."}
+        "spellcasting": {"cd": 7 , "prizes": "the shadowmancer is defeated, his shadowy form begins to crumble. Confused, he falls into his own cauldron, where he is swallowed by the darkness he was conjuring."},
+        "thinking": {"cd": 8 , "prizes": "The protagonist outsmarts the Shadowmancer. Confused, he falls into his own cauldron, where he is swallowed by the darkness he was conjuring."},
+        "tinkering": {"cd": 8 , "prizes": "The protagonist action has effect on the Shadowmancer. Confused, he falls into his own cauldron, where he is swallowed by the darkness he was conjuring."}
       },
       "block_path": true
     }

@@ -170,6 +170,7 @@ app.MapPost("/action", async ( ActionRequest action = null) =>
         string content = action?.content;
         Debug.Print($"Action: {content}");
         SceneInfo sceneInfo = new SceneInfo();
+        sceneInfo.user_input = content;
         int current_act = WorldStateInfo.act;
         string pathfinderContent = "";
         if (!string.IsNullOrEmpty(content))
@@ -254,6 +255,7 @@ app.MapPost("/action", async ( ActionRequest action = null) =>
             }
         }
         AppData.test.scenes.Add(sceneInfo);
+        AppData.SaveTestData();
         _ = Task.Run(async () =>
             {
                 try

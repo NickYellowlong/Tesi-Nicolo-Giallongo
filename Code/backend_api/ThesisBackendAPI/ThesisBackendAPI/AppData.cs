@@ -149,6 +149,7 @@ public struct SceneInfo
 
     public SceneInfo()
     {
+        
     }
 }
 public struct Test
@@ -247,6 +248,7 @@ public static class AppData
         } while (n > 0);
         test.user_id = userID.PadLeft(4, '0');
         _testData.testers_number += 1;
+        Debug.Print($"USER ID: {test.user_id}");
     }
 
     private static void DeserializeActs(Data data)
